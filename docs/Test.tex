@@ -103,6 +103,9 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+\usepackage[normalem]{ulem}
+% Avoid problems with \sout in headers with hyperref
+\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -116,7 +119,7 @@
 
 \title{Formato del TFG}
 \author{Marco Pérez Castro}
-\date{2020-11-04}
+\date{2020-11-06}
 
 \begin{document}
 \maketitle
@@ -134,7 +137,7 @@ El paquete \textbf{bookdown} se puede instalar desde el CRAN o Github:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -147,8 +150,8 @@ Figuras y tablas con pie de imagen serán colocadas en entornos \texttt{figure} 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{.1}\NormalTok{, }\FloatTok{.1}\NormalTok{))}
-\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
+\FunctionTok{plot}\NormalTok{(pressure, }\AttributeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -165,9 +168,9 @@ Se puede hacer referencia a una figura por su etiqueta del bloque de código usa
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
-  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{\textquotesingle{}Tabla muy importante\textquotesingle{}}\NormalTok{,}
-  \DataTypeTok{booktabs =} \OtherTok{TRUE}
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
+  \FunctionTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Tabla muy importante\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{booktabs =} \ConstantTok{TRUE}
 \NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -237,7 +240,7 @@ Como seguimos trabajando con \emph{RStudio}, cargando la librería \texttt{retic
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(reticulate)}
+\FunctionTok{library}\NormalTok{(reticulate)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -278,15 +281,21 @@ Como seguimos trabajando con \emph{RStudio}, cargando la librería \texttt{retic
 \item
   Añadir referencias correctamente.
 \item
-  Cambiar o quitar los iconos de las redes sociales en la esquina superior derecha.
+  \sout{Cambiar o quitar los iconos de las redes sociales en la esquina superior derecha.}
 \item
   Cambiar el resaltado de código de Python. Así se ve demasiado plano y resulta difícil leerlo.
 \item
   Experimentar con paquetes de Latex.
 \item
-  Al compilar esta página tengo el siguiente error:
-  \texttt{/usr/lib64/R/bin/exec/R:\ symbol\ lookup\ error:\ /usr/lib/rstudio/plugins/imageformats/libqgif.so:\ undefined\ symbol:\ \_ZdlPvm,\ version\ Qt\_5}
-  Ese error me impide modificar el nombre que aparece encima del menú de navegación que hay a la izquierda y me da un warning en las referencias, aunque estas parecen funcionar más o menos bien. Es un problema de mi ordenador debido a un lío que tiene que haber en las librerías \emph{Qt}. Probaré con el sobremesa y espero que no tenga más problemas.
+  \sout{Al compilar esta página tengo el siguiente error:
+  \mbox{\texttt{/usr/lib64/R/bin/exec/R:\ symbol\ lookup\ error:\ /usr/lib/rstudio/plugins/imageformats/libqgif.so:\ undefined\ symbol:\ \_ZdlPvm,\ version\ Qt\_5}}
+  Ese error me impide modificar el nombre que aparece encima del menú de navegación que hay a la izquierda y me da un warning en las referencias, aunque estas parecen funcionar más o menos bien. Es un problema de mi ordenador debido a un lío que tiene que haber en las librerías \emph{Qt}. Probaré con el sobremesa y espero que no tenga más problemas.}
+\item
+  Experimentar con el PDF autogenerado. Se ve muy cutre.
+\item
+  Cuando se le da a editar, que lleve a la página adecuada de Github para poder crear un request.
+\item
+  Probar los distintos temas de la página (tema claro u oscuro).
 \end{itemize}
 
   \bibliography{book.bib,packages.bib}

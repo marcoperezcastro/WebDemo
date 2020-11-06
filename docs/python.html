@@ -10,10 +10,10 @@
 
   <meta property="og:title" content="Capítulo 6 Python | Formato del TFG" />
   <meta property="og:type" content="book" />
-  
+  <meta property="og:url" content="marcoperezcastro.github.io" />
   
   <meta property="og:description" content="Esto es un breve documento en el que se muestra el formato con el que me gustaría hacer el TFG" />
-  
+  <meta name="github-repo" content="marcoperezcastro/WebDemo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Capítulo 6 Python | Formato del TFG" />
@@ -24,13 +24,13 @@
 <meta name="author" content="Marco Pérez Castro" />
 
 
-<meta name="date" content="2020-11-04" />
+<meta name="date" content="2020-11-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="/home/marco/Documentos/Universidad/TFG/Pagina web demo/Test/iconoweb.jpeg" type="image/x-icon" />
 <link rel="prev" href="modelos-y-aplicaciones.html"/>
 <link rel="next" href="hoja-de-ruta.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
@@ -132,7 +132,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Formato del TFG</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Requisitos previos</a></li>
@@ -170,22 +170,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="python" class="section level1" number="6">
 <h1><span class="header-section-number">Capítulo 6</span> Python</h1>
 <p>Como seguimos trabajando con <em>RStudio</em>, cargando la librería <code>reticulate</code> obtenemos toda la artillería de Python a nuestra disposición:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="python.html#cb4-1" aria-hidden="true"></a><span class="kw">library</span>(reticulate)</span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="python.html#cb5-1" aria-hidden="true"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
-<span id="cb5-2"><a href="python.html#cb5-2" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-3"><a href="python.html#cb5-3" aria-hidden="true"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-4"><a href="python.html#cb5-4" aria-hidden="true"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
-<span id="cb5-5"><a href="python.html#cb5-5" aria-hidden="true"></a><span class="im">from</span> matplotlib.ticker <span class="im">import</span> LinearLocator, FormatStrFormatter</span>
-<span id="cb5-6"><a href="python.html#cb5-6" aria-hidden="true"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb5-7"><a href="python.html#cb5-7" aria-hidden="true"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb5-8"><a href="python.html#cb5-8" aria-hidden="true"></a>X <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="fl">0.25</span>)</span>
-<span id="cb5-9"><a href="python.html#cb5-9" aria-hidden="true"></a>Y <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="fl">0.25</span>)</span>
-<span id="cb5-10"><a href="python.html#cb5-10" aria-hidden="true"></a>X, Y <span class="op">=</span> np.meshgrid(X, Y)</span>
-<span id="cb5-11"><a href="python.html#cb5-11" aria-hidden="true"></a>Z <span class="op">=</span> np.sin(np.sqrt(X<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> Y<span class="op">**</span><span class="dv">2</span>))</span>
-<span id="cb5-12"><a href="python.html#cb5-12" aria-hidden="true"></a>surf <span class="op">=</span> ax.plot_surface(X, Y, Z, cmap<span class="op">=</span>cm.coolwarm,</span>
-<span id="cb5-13"><a href="python.html#cb5-13" aria-hidden="true"></a>        linewidth<span class="op">=</span><span class="dv">0</span>, antialiased<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb5-14"><a href="python.html#cb5-14" aria-hidden="true"></a>fig.colorbar(surf, shrink<span class="op">=</span><span class="fl">0.5</span>, aspect<span class="op">=</span><span class="dv">5</span>)<span class="op">;</span></span>
-<span id="cb5-15"><a href="python.html#cb5-15" aria-hidden="true"></a>plt.show()                                </span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="python.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="python.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb5-2"><a href="python.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-3"><a href="python.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-4"><a href="python.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
+<span id="cb5-5"><a href="python.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.ticker <span class="im">import</span> LinearLocator, FormatStrFormatter</span>
+<span id="cb5-6"><a href="python.html#cb5-6" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb5-7"><a href="python.html#cb5-7" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.gca(projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb5-8"><a href="python.html#cb5-8" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="fl">0.25</span>)</span>
+<span id="cb5-9"><a href="python.html#cb5-9" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="fl">0.25</span>)</span>
+<span id="cb5-10"><a href="python.html#cb5-10" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.meshgrid(X, Y)</span>
+<span id="cb5-11"><a href="python.html#cb5-11" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> np.sin(np.sqrt(X<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> Y<span class="op">**</span><span class="dv">2</span>))</span>
+<span id="cb5-12"><a href="python.html#cb5-12" aria-hidden="true" tabindex="-1"></a>surf <span class="op">=</span> ax.plot_surface(X, Y, Z, cmap<span class="op">=</span>cm.coolwarm,</span>
+<span id="cb5-13"><a href="python.html#cb5-13" aria-hidden="true" tabindex="-1"></a>        linewidth<span class="op">=</span><span class="dv">0</span>, antialiased<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb5-14"><a href="python.html#cb5-14" aria-hidden="true" tabindex="-1"></a>fig.colorbar(surf, shrink<span class="op">=</span><span class="fl">0.5</span>, aspect<span class="op">=</span><span class="dv">5</span>)<span class="op">;</span></span>
+<span id="cb5-15"><a href="python.html#cb5-15" aria-hidden="true" tabindex="-1"></a>plt.show()                                </span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
 <img src="Test_files/figure-html/unnamed-chunk-3-1.png" alt="Gráfica clave de Python" width="80%" />
 <p class="caption">
@@ -216,9 +216,9 @@ Figure 6.1: Gráfica clave de Python
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
+"github": true,
+"facebook": false,
+"twitter": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
@@ -231,8 +231,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/marcoperezcastro/WebDemo/edit/master/05-Python.Rmd",
+"text": "Edit"
 },
 "history": {
 "link": null,
@@ -242,10 +242,11 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["Test.pdf", "Test.epub"],
+"download": ["Test.pdf"],
 "toc": {
 "collapse": "subsection"
-}
+},
+"info": true
 });
 });
 </script>

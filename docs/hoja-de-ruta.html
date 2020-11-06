@@ -10,10 +10,10 @@
 
   <meta property="og:title" content="Capítulo 7 Hoja de ruta | Formato del TFG" />
   <meta property="og:type" content="book" />
-  
+  <meta property="og:url" content="marcoperezcastro.github.io" />
   
   <meta property="og:description" content="Esto es un breve documento en el que se muestra el formato con el que me gustaría hacer el TFG" />
-  
+  <meta name="github-repo" content="marcoperezcastro/WebDemo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Capítulo 7 Hoja de ruta | Formato del TFG" />
@@ -24,13 +24,13 @@
 <meta name="author" content="Marco Pérez Castro" />
 
 
-<meta name="date" content="2020-11-04" />
+<meta name="date" content="2020-11-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="/home/marco/Documentos/Universidad/TFG/Pagina web demo/Test/iconoweb.jpeg" type="image/x-icon" />
 <link rel="prev" href="python.html"/>
 <link rel="next" href="references.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
@@ -132,7 +132,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Formato del TFG</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Requisitos previos</a></li>
@@ -171,12 +171,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Capítulo 7</span> Hoja de ruta</h1>
 <ul>
 <li>Añadir referencias correctamente.</li>
-<li>Cambiar o quitar los iconos de las redes sociales en la esquina superior derecha.</li>
+<li><del>Cambiar o quitar los iconos de las redes sociales en la esquina superior derecha.</del></li>
 <li>Cambiar el resaltado de código de Python. Así se ve demasiado plano y resulta difícil leerlo.</li>
 <li>Experimentar con paquetes de Latex.</li>
-<li>Al compilar esta página tengo el siguiente error:
+<li><del>Al compilar esta página tengo el siguiente error:
 <code>/usr/lib64/R/bin/exec/R: symbol lookup error: /usr/lib/rstudio/plugins/imageformats/libqgif.so: undefined symbol: _ZdlPvm, version Qt_5</code>
-Ese error me impide modificar el nombre que aparece encima del menú de navegación que hay a la izquierda y me da un warning en las referencias, aunque estas parecen funcionar más o menos bien. Es un problema de mi ordenador debido a un lío que tiene que haber en las librerías <em>Qt</em>. Probaré con el sobremesa y espero que no tenga más problemas.</li>
+Ese error me impide modificar el nombre que aparece encima del menú de navegación que hay a la izquierda y me da un warning en las referencias, aunque estas parecen funcionar más o menos bien. Es un problema de mi ordenador debido a un lío que tiene que haber en las librerías <em>Qt</em>. Probaré con el sobremesa y espero que no tenga más problemas.</del></li>
+<li>Experimentar con el PDF autogenerado. Se ve muy cutre.</li>
+<li>Cuando se le da a editar, que lleve a la página adecuada de Github para poder crear un request.</li>
+<li>Probar los distintos temas de la página (tema claro u oscuro).</li>
 </ul>
 
 </div>
@@ -202,9 +205,9 @@ Ese error me impide modificar el nombre que aparece encima del menú de navegaci
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
+"github": true,
+"facebook": false,
+"twitter": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
@@ -217,8 +220,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/marcoperezcastro/WebDemo/edit/master/06-Hojaderuta.Rmd",
+"text": "Edit"
 },
 "history": {
 "link": null,
@@ -228,10 +231,11 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["Test.pdf", "Test.epub"],
+"download": ["Test.pdf"],
 "toc": {
 "collapse": "subsection"
-}
+},
+"info": true
 });
 });
 </script>
